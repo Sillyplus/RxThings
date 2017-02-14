@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B3721E535980004183B9 /* ShakeDebug.swift */; };
 		3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7627FB1E52A70F0052C07A /* AppDelegate.swift */; };
-		3B7627FE1E52A70F0052C07A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7627FD1E52A70F0052C07A /* ViewController.swift */; };
-		3B7628011E52A70F0052C07A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7627FF1E52A70F0052C07A /* Main.storyboard */; };
 		3B7628031E52A70F0052C07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7628021E52A70F0052C07A /* Assets.xcassets */; };
 		3B7628061E52A70F0052C07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7628041E52A70F0052C07A /* LaunchScreen.storyboard */; };
 		3B7628111E52A70F0052C07A /* RxThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628101E52A70F0052C07A /* RxThingsTests.swift */; };
 		3B76281C1E52A70F0052C07A /* RxThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76281B1E52A70F0052C07A /* RxThingsUITests.swift */; };
+		3B76282A1E53367E0052C07A /* AppearanceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628291E53367E0052C07A /* AppearanceConstants.swift */; };
+		3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76282B1E53419F0052C07A /* TodoListsViewController.swift */; };
 		A832620D62DA7BEB47367702 /* Pods_RxThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CDDCC43EEC00EDB2BAF07F /* Pods_RxThings.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,10 +38,9 @@
 /* Begin PBXFileReference section */
 		19CDDCC43EEC00EDB2BAF07F /* Pods_RxThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2811113AA6A261E85A606D3C /* Pods-RxThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxThings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxThings/Pods-RxThings.debug.xcconfig"; sourceTree = "<group>"; };
+		3B67B3721E535980004183B9 /* ShakeDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeDebug.swift; sourceTree = "<group>"; };
 		3B7627F81E52A70F0052C07A /* RxThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7627FB1E52A70F0052C07A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B7627FD1E52A70F0052C07A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B7628001E52A70F0052C07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B7628021E52A70F0052C07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7628051E52A70F0052C07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7628071E52A70F0052C07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		3B7628171E52A70F0052C07A /* RxThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxThingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B76281B1E52A70F0052C07A /* RxThingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxThingsUITests.swift; sourceTree = "<group>"; };
 		3B76281D1E52A70F0052C07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7628291E53367E0052C07A /* AppearanceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceConstants.swift; sourceTree = "<group>"; };
+		3B76282B1E53419F0052C07A /* TodoListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListsViewController.swift; sourceTree = "<group>"; };
 		DF5DCDC1F1021C179854A4BA /* Pods-RxThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxThings/Pods-RxThings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,8 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				3B7627FB1E52A70F0052C07A /* AppDelegate.swift */,
-				3B7627FD1E52A70F0052C07A /* ViewController.swift */,
-				3B7627FF1E52A70F0052C07A /* Main.storyboard */,
+				3B76282B1E53419F0052C07A /* TodoListsViewController.swift */,
+				3B7628291E53367E0052C07A /* AppearanceConstants.swift */,
+				3B67B3721E535980004183B9 /* ShakeDebug.swift */,
 				3B7628021E52A70F0052C07A /* Assets.xcassets */,
 				3B7628041E52A70F0052C07A /* LaunchScreen.storyboard */,
 				3B7628071E52A70F0052C07A /* Info.plist */,
@@ -264,7 +267,6 @@
 			files = (
 				3B7628061E52A70F0052C07A /* LaunchScreen.storyboard in Resources */,
 				3B7628031E52A70F0052C07A /* Assets.xcassets in Resources */,
-				3B7628011E52A70F0052C07A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7627FE1E52A70F0052C07A /* ViewController.swift in Sources */,
+				3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */,
+				3B76282A1E53367E0052C07A /* AppearanceConstants.swift in Sources */,
+				3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */,
 				3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,14 +378,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B7627FF1E52A70F0052C07A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B7628001E52A70F0052C07A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B7628041E52A70F0052C07A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CVTM26ZE7;
 				INFOPLIST_FILE = RxThings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applesysu.RxThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CVTM26ZE7;
 				INFOPLIST_FILE = RxThings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applesysu.RxThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,6 +591,7 @@
 				3B7628221E52A70F0052C07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B7628231E52A70F0052C07A /* Build configuration list for PBXNativeTarget "RxThingsTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +600,7 @@
 				3B7628251E52A70F0052C07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B7628261E52A70F0052C07A /* Build configuration list for PBXNativeTarget "RxThingsUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +609,7 @@
 				3B7628281E52A70F0052C07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
