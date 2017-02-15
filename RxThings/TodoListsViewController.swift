@@ -29,33 +29,24 @@ class TodoListsViewController: UIViewController {
         homeList.delegate = self
         homeList.dataSource = self
         
-        
         // Setup ToolBarItem
-        // TODO: Add customize BarButton and action
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(TodoListsViewController.turnBlack))
-        let likeButton = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(TodoListsViewController.turnWhite))
-        let removeButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(TodoListsViewController.turnBlue))
+        let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Plus Math"), style: .plain, target: self, action: #selector(TodoListsViewController.navigateToAddView))
+        let settingButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Settings"), style: .plain , target: self, action: #selector(TodoListsViewController.navigateToSettingView))
         tools.append(addButton)
         tools.append(flexibleItem)
-        tools.append(likeButton)
-        tools.append(flexibleItem)
-        tools.append(removeButton)
+        tools.append(settingButton)
         self.navigationController?.setToolbarHidden(false, animated: false)
         self.setToolbarItems(tools, animated: false)
         
     }
     
-    func turnBlack() {
-        self.navigationController?.toolbar.tintColor = .black
+    func navigateToAddView() {
+        
     }
     
-    func turnWhite() {
-        self.navigationController?.toolbar.tintColor = UIColor.white
-    }
-    
-    func turnBlue() {
-        self.navigationController?.toolbar.tintColor = .blue
+    func navigateToSettingView() {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,7 +62,6 @@ extension TodoListsViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    // TODO: Add customize cell and further views
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
@@ -82,6 +72,37 @@ extension TodoListsViewController: UITableViewDataSource, UITableViewDelegate {
             cell.preservesSuperviewLayoutMargins = false
         }
         
+        // Setup Cell Image & Title
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = "Inbox"
+            cell.imageView?.image = #imageLiteral(resourceName: "inbox")
+        case 1:
+            switch indexPath.row {
+            case 0:
+                cell.textLabel?.text = "Today"
+                cell.imageView?.image = #imageLiteral(resourceName: "star")
+            case 1:
+                cell.textLabel?.text = "Next"
+                cell.imageView?.image = #imageLiteral(resourceName: "task")
+            case 2:
+                cell.textLabel?.text = "Scheduled"
+                cell.imageView?.image = #imageLiteral(resourceName: "schedule")
+            case 3:
+                cell.textLabel?.text = "Someday"
+                cell.imageView?.image = #imageLiteral(resourceName: "box")
+            default:
+                return cell
+            }
+        case 2:
+            cell.textLabel?.text = "Projects"
+            cell.imageView?.image = #imageLiteral(resourceName: "project")
+        default:
+            return cell
+        }
+        
+        cell.accessoryType = .disclosureIndicator
+
         return cell
     }
     
