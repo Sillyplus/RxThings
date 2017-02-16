@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
+import SQLite
 
 struct ColorConstant {
     static let navigationBarColor: UIColor = UIColor(red:0.42, green:0.54, blue:0.80, alpha:1.00)
     static let backgroudColor: UIColor = UIColor(red:0.90, green:0.90, blue:0.90, alpha:1.00)
+}
+
+struct DBConstant {
+    static let dbPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    static let tasksTableName = "Tasks"
 }

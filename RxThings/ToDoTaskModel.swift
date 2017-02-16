@@ -7,13 +7,54 @@
 //
 
 import Foundation
+import SQLite
 
 class TodoTask {
     
+    static let idEx = Expression<Int64>("id")
+    static let titleEx = Expression<String>("title")
+    
+
     var title: String
     
-    init() {
-        title = "Todo"
+    init(title: String) {
+        self.title = title
+    }
+    
+    public func save() {
+        do {
+            let db = try Connection("\(DBConstant.dbPath)/db.sqlite3")
+            let tasks = Table(DBConstant.tasksTableName)
+            do {
+                let rowId = try db.run(tasks.insert(TodoTask.titleEx <- self.title))
+                print("Record Id: \(rowId)")
+            } catch {
+                print("Insert New Task Failed")
+            }
+        } catch {
+            print("Connect To DB Failed!")
+        }
+    }
+
+}
+
+extension TodoTask {
+    
+    static func createTable() {
+        do {
+            let db = try Connection("\(DBConstant.dbPath)/db.sqlite3")
+            let tasks = Table(DBConstant.tasksTableName)
+            do {
+                try db.run(tasks.create(ifNotExists: true) { t in
+                    t.column(self.idEx, primaryKey: true)
+                    t.column(self.titleEx)
+                })
+            } catch {
+                print("Create Table failed")
+            }
+        } catch {
+            print("Connect to DB failed")
+        }
     }
     
 }

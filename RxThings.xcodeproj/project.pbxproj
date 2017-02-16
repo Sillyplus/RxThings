@@ -15,7 +15,7 @@
 		3B7628061E52A70F0052C07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7628041E52A70F0052C07A /* LaunchScreen.storyboard */; };
 		3B7628111E52A70F0052C07A /* RxThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628101E52A70F0052C07A /* RxThingsTests.swift */; };
 		3B76281C1E52A70F0052C07A /* RxThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76281B1E52A70F0052C07A /* RxThingsUITests.swift */; };
-		3B76282A1E53367E0052C07A /* AppearanceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628291E53367E0052C07A /* AppearanceConstants.swift */; };
+		3B76282A1E53367E0052C07A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628291E53367E0052C07A /* Constants.swift */; };
 		3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76282B1E53419F0052C07A /* TodoListsViewController.swift */; };
 		3BC2EA1F1E55E72F0081AEF8 /* ToDoTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA1E1E55E72F0081AEF8 /* ToDoTaskModel.swift */; };
 		A832620D62DA7BEB47367702 /* Pods_RxThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CDDCC43EEC00EDB2BAF07F /* Pods_RxThings.framework */; };
@@ -55,7 +55,7 @@
 		3B7628171E52A70F0052C07A /* RxThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxThingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B76281B1E52A70F0052C07A /* RxThingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxThingsUITests.swift; sourceTree = "<group>"; };
 		3B76281D1E52A70F0052C07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B7628291E53367E0052C07A /* AppearanceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceConstants.swift; sourceTree = "<group>"; };
+		3B7628291E53367E0052C07A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B76282B1E53419F0052C07A /* TodoListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListsViewController.swift; sourceTree = "<group>"; };
 		3BC2EA1E1E55E72F0081AEF8 /* ToDoTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTaskModel.swift; sourceTree = "<group>"; };
 		DF5DCDC1F1021C179854A4BA /* Pods-RxThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxThings/Pods-RxThings.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3B67B3721E535980004183B9 /* ShakeDebug.swift */,
-				3B7628291E53367E0052C07A /* AppearanceConstants.swift */,
+				3B7628291E53367E0052C07A /* Constants.swift */,
 				3B7628071E52A70F0052C07A /* Info.plist */,
 			);
 			name = Utility;
@@ -381,7 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */,
-				3B76282A1E53367E0052C07A /* AppearanceConstants.swift in Sources */,
+				3B76282A1E53367E0052C07A /* Constants.swift in Sources */,
 				3BC2EA1F1E55E72F0081AEF8 /* ToDoTaskModel.swift in Sources */,
 				3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */,
 				3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */,

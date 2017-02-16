@@ -26,10 +26,10 @@ class TodoListsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup View Title
+        /// Setup View Title
         self.navigationItem.title = "Lists"
         
-        // Setup Home List
+        /// Setup Home List
         homeList = UITableView(frame: self.view.bounds, style: .grouped)
         self.view.addSubview(homeList)
         homeList.snp.makeConstraints { (make) in
@@ -39,7 +39,7 @@ class TodoListsViewController: UIViewController {
         homeList.delegate = self
         homeList.dataSource = self
         
-        // Setup ToolBarItem
+        /// Setup ToolBarItem
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Plus Math"), style: .plain, target: self, action: #selector(TodoListsViewController.addNewTask))
         let settingButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Settings"), style: .plain , target: self, action: #selector(TodoListsViewController.navigateToSettingView))
@@ -49,7 +49,7 @@ class TodoListsViewController: UIViewController {
         self.navigationController?.setToolbarHidden(false, animated: false)
         self.setToolbarItems(tools, animated: false)
         
-        // Setup QuickInput Bar Views
+        /// Setup QuickInput Bar Views
         clearView = UIView(frame: self.navigationController!.toolbar.frame)
         self.view.addSubview(clearView!)
         clearView?.isHidden = true
@@ -82,7 +82,7 @@ class TodoListsViewController: UIViewController {
     }
     
     func addNewTask() {
-        // Change QuickInput Bar
+        /// Change QuickInput Bar
         self.navigationController?.setToolbarHidden(true, animated: false)
         clearView?.isHidden = false
         
@@ -90,7 +90,7 @@ class TodoListsViewController: UIViewController {
         keyboardHeight = 255
     }
     
-    // Touch other part of the screen, close Keyboard
+    /// Touch other part of the screen, close Keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.inputField?.resignFirstResponder()
         self.clearView?.isHidden = true
@@ -112,7 +112,7 @@ class TodoListsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        /// Dispose of any resources that can be recreated.
     }
     
 }
@@ -121,9 +121,9 @@ extension TodoListsViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.detailButton?.isEnabled = true
-        // resize ClearView
+        /// resize ClearView
         clearView?.frame = self.view.frame
-        // Move quickInputView to the top of the keyboard
+        /// Move quickInputView to the top of the keyboard
         let animationDuration = 0.4
         UIView.animate(withDuration: animationDuration) {
             let frameY = self.view.frame.height - self.keyboardHeight - 44
@@ -137,25 +137,30 @@ extension TodoListsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.detailButton?.isEnabled = false
-        // Move quickInputView to the buttom of the screen
+        /// Move quickInputView to the buttom of the screen
         let animationDuration = 0.4
         UIView.animate(withDuration: animationDuration) {
             self.quickInputView?.snp.remakeConstraints({ (make) in
                 make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
             })
         }
-        // resize ClearView after remake quickInpurView constraints
+        /// resize ClearView after remake quickInpurView constraints
         self.clearView?.frame = CGRect(x: 0, y: self.view.frame.height - 44, width: self.view.frame.width, height: 44)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == nil || textField.text == "" {
+            return false
+        }
         textField.resignFirstResponder()
         self.navigationController?.setToolbarHidden(false, animated: false)
         self.clearView?.isHidden = true
         
         // TODO: Create Task with TextField text
+        let task = TodoTask(title: textField.text!)
+        task.save()
         
-        // Clear text
+        /// Clear text
         textField.text = ""
         return true
     }
