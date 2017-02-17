@@ -13,11 +13,11 @@ class TasksManager {
     
     static let idEx = Expression<Int64>("id")
     static let titleEx = Expression<String>("title")
-    static let hasRemindDate = Expression<Bool>("hasRemindDate")
-    static let remindDate = Expression<Date>("remindDate")
-    static let repeatTimes = Expression<Int64>("repeatTimes")
-    static let isDue = Expression<Bool>("isDue")
-    static let dueDate = Expression<Date>("dueDate")
+    static let hasRemindDate = Expression<Bool?>("hasRemindDate")
+    static let remindDate = Expression<Date?>("remindDate")
+    static let repeatTimes = Expression<Int64?>("repeatTimes")
+    static let isDue = Expression<Bool?>("isDue")
+    static let dueDate = Expression<Date?>("dueDate")
     
     /// Make Singleton
     var db: Connection?
@@ -30,6 +30,7 @@ class TasksManager {
     private init() {
         do {
             self.db = try Connection("\(DBConstant.dbPath)/db.sqlite3")
+            print(NSHomeDirectory())
         } catch {
             self.db = nil
         }
@@ -97,7 +98,8 @@ extension TasksManager {
             let tasks = Table(DBConstant.tasksTableName)
             do {
                 for task in try db!.prepare(tasks) {
-                    ret.append(Task(title: "\(task[TasksManager.titleEx])"))
+                    ret.append(Task(title: task[TasksManager.titleEx]))
+                    print(task)
                 }
                 return ret
             } catch {

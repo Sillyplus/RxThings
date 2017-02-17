@@ -48,7 +48,6 @@ extension InboxViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return inbox.count
-            return 0
         } else {
             return 0
         }
