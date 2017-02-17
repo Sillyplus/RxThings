@@ -35,7 +35,7 @@ class TodoTask {
             print("Connect To DB Failed!")
         }
     }
-
+    
 }
 
 extension TodoTask {
@@ -55,6 +55,26 @@ extension TodoTask {
         } catch {
             print("Connect to DB failed")
         }
+    }
+    
+    static func fetchAll() -> [String] {
+        var ret: [String] = []
+        
+        do {
+            let db = try Connection("\(DBConstant.dbPath)/db.sqlite3")
+            let tasks = Table(DBConstant.tasksTableName)
+            do {
+                for task in try db.prepare(tasks) {
+                    ret.append("\(task[TodoTask.titleEx])")
+                }
+            } catch {
+                print("Fetch All Tasks Failed")
+            }
+        } catch {
+            print("Connect To DB Failed!")
+        }
+        
+        return ret
     }
     
 }
