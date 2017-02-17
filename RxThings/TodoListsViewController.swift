@@ -101,12 +101,13 @@ class TodoListsViewController: UIViewController {
         let addTaskViewController = AddTaskViewController()
         self.navigationController?.setToolbarHidden(true, animated: true)
         self.present(addTaskViewController, animated: true) {
-            
+            // Do Something
         }
     }
     
     func navigateToSettingView() {
         let settingViewController = SettingViewController()
+        self.navigationController?.setToolbarHidden(true, animated: true)
         self.show(settingViewController, sender: self)
     }
     
@@ -172,19 +173,48 @@ extension TodoListsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        var newViewController: UIViewController
+        
+        // TODO: Setup Real NewVC
+        switch indexPath.section {
+        case 0:
+            newViewController = InboxViewController()
+        case 1:
+            switch indexPath.row {
+            case 0:
+                newViewController = TodayViewController()
+            case 1:
+                newViewController = NextViewController()
+            case 2:
+                newViewController = ScheduledViewController()
+            case 3:
+                newViewController = SomedayViewController()
+            default:
+                newViewController = UIViewController()
+            }
+        case 2:
+            newViewController = ProjectsViewController()
+        default:
+            newViewController = UIViewController()
+        }
+        
+        /// Navigate to Next View
+        self.navigationController?.setToolbarHidden(true, animated: true)
+        self.show(newViewController, sender: self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        // Remove white space before separate line
+        /// Remove white space before separate line
         cell.separatorInset = UIEdgeInsetsMake(0, 0, cell.frame.size.width, 0)
         if cell.responds(to: #selector(getter: UIView.preservesSuperviewLayoutMargins)) {
             cell.layoutMargins = UIEdgeInsets.zero
             cell.preservesSuperviewLayoutMargins = false
         }
         
-        // Setup Cell Image & Title
+        /// Setup Cell Image & Title
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = "Inbox"

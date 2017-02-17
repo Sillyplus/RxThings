@@ -18,6 +18,12 @@
 		3B76282A1E53367E0052C07A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7628291E53367E0052C07A /* Constants.swift */; };
 		3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76282B1E53419F0052C07A /* TodoListsViewController.swift */; };
 		3BC2EA1F1E55E72F0081AEF8 /* ToDoTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA1E1E55E72F0081AEF8 /* ToDoTaskModel.swift */; };
+		3BC2EA211E5695E60081AEF8 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA201E5695E60081AEF8 /* InboxViewController.swift */; };
+		3BC2EA231E5697800081AEF8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA221E5697800081AEF8 /* TodayViewController.swift */; };
+		3BC2EA251E5697930081AEF8 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA241E5697930081AEF8 /* NextViewController.swift */; };
+		3BC2EA271E5697A20081AEF8 /* ScheduledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA261E5697A20081AEF8 /* ScheduledViewController.swift */; };
+		3BC2EA291E5697BE0081AEF8 /* SomedayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA281E5697BE0081AEF8 /* SomedayViewController.swift */; };
+		3BC2EA2B1E5697CA0081AEF8 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2EA2A1E5697CA0081AEF8 /* ProjectsViewController.swift */; };
 		A832620D62DA7BEB47367702 /* Pods_RxThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CDDCC43EEC00EDB2BAF07F /* Pods_RxThings.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		3B7628291E53367E0052C07A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B76282B1E53419F0052C07A /* TodoListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListsViewController.swift; sourceTree = "<group>"; };
 		3BC2EA1E1E55E72F0081AEF8 /* ToDoTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTaskModel.swift; sourceTree = "<group>"; };
+		3BC2EA201E5695E60081AEF8 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		3BC2EA221E5697800081AEF8 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		3BC2EA241E5697930081AEF8 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		3BC2EA261E5697A20081AEF8 /* ScheduledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledViewController.swift; sourceTree = "<group>"; };
+		3BC2EA281E5697BE0081AEF8 /* SomedayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomedayViewController.swift; sourceTree = "<group>"; };
+		3BC2EA2A1E5697CA0081AEF8 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		DF5DCDC1F1021C179854A4BA /* Pods-RxThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxThings/Pods-RxThings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +106,12 @@
 				3B76282B1E53419F0052C07A /* TodoListsViewController.swift */,
 				3B67B37B1E54A1CC004183B9 /* AddTaskViewController.swift */,
 				3B67B37D1E54A1F9004183B9 /* SettingViewController.swift */,
+				3BC2EA201E5695E60081AEF8 /* InboxViewController.swift */,
+				3BC2EA221E5697800081AEF8 /* TodayViewController.swift */,
+				3BC2EA241E5697930081AEF8 /* NextViewController.swift */,
+				3BC2EA261E5697A20081AEF8 /* ScheduledViewController.swift */,
+				3BC2EA281E5697BE0081AEF8 /* SomedayViewController.swift */,
+				3BC2EA2A1E5697CA0081AEF8 /* ProjectsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -382,10 +400,16 @@
 			files = (
 				3B76282C1E53419F0052C07A /* TodoListsViewController.swift in Sources */,
 				3B76282A1E53367E0052C07A /* Constants.swift in Sources */,
+				3BC2EA231E5697800081AEF8 /* TodayViewController.swift in Sources */,
+				3BC2EA291E5697BE0081AEF8 /* SomedayViewController.swift in Sources */,
 				3BC2EA1F1E55E72F0081AEF8 /* ToDoTaskModel.swift in Sources */,
+				3BC2EA211E5695E60081AEF8 /* InboxViewController.swift in Sources */,
+				3BC2EA251E5697930081AEF8 /* NextViewController.swift in Sources */,
+				3BC2EA271E5697A20081AEF8 /* ScheduledViewController.swift in Sources */,
 				3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */,
 				3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */,
 				3B67B37C1E54A1CC004183B9 /* AddTaskViewController.swift in Sources */,
+				3BC2EA2B1E5697CA0081AEF8 /* ProjectsViewController.swift in Sources */,
 				3B67B37E1E54A1F9004183B9 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.tintColor = ColorConstant.navigationBarColor
-        navigationBarAppearance.barTintColor = ColorConstant.navigationBarColor
+        navigationBarAppearance.tintColor = ColorConstant.navigationBarTintColor
+        navigationBarAppearance.barTintColor = ColorConstant.navigationBarBarTintColor
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
         let navigationController = UINavigationController(rootViewController: TodoListsViewController())
