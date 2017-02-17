@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.makeKeyAndVisible()
         
         /// Init DB
-        TodoTask.createTable()
+        TasksManager.createTable()
         
         return true
     }

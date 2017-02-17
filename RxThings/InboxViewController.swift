@@ -11,7 +11,7 @@ import UIKit
 class InboxViewController: UIViewController {
     
     lazy var tasksList = UITableView()
-    lazy var allTasks: [String] = TodoTask.fetchAll()
+    lazy var inbox: [Task] = TasksManager.singleton.fetchInbox()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,8 @@ extension InboxViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return allTasks.count
+            return inbox.count
+            return 0
         } else {
             return 0
         }
@@ -55,7 +56,8 @@ extension InboxViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = allTasks[indexPath.row]
+        let task = inbox[indexPath.row]
+        cell.textLabel?.text = task.title
         return cell
     }
     

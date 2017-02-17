@@ -158,8 +158,9 @@ extension TodoListsViewController: UITextFieldDelegate {
         self.clearView?.isHidden = true
         
         // TODO: Create Task with TextField text
-        let task = TodoTask(title: textField.text!)
-        task.save()
+        let task = Task(title: textField.text!)
+        let tasksManager = TasksManager.singleton
+        tasksManager.save(task)
         
         /// Clear text
         textField.text = ""
