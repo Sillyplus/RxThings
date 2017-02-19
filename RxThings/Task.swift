@@ -11,15 +11,26 @@ import SQLite
 
 class Task {
     
+    var id: Int64?
     var title: String
-    var hasRemindDate: Bool?
     var remindDate: Date?
     var repeatTimes: Int64?
-    var isDue: Bool?
     var dueDate: Date?
+    var note: String?
     
     init(title: String) {
         self.title = title
+    }
+    
+    
+    
+    init(taskRow: Row) {
+        self.id = taskRow[TasksManager.idEx]
+        self.title = taskRow[TasksManager.titleEx]
+        self.remindDate = taskRow[TasksManager.remindDateEx]
+        self.repeatTimes = taskRow[TasksManager.repeatTimesEx]
+        self.dueDate = taskRow[TasksManager.dueDateEx]
+        self.note = taskRow[TasksManager.noteEx]
     }
     
 }

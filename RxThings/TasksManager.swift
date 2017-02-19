@@ -13,11 +13,10 @@ class TasksManager {
     
     static let idEx = Expression<Int64>("id")
     static let titleEx = Expression<String>("title")
-    static let hasRemindDate = Expression<Bool?>("hasRemindDate")
-    static let remindDate = Expression<Date?>("remindDate")
-    static let repeatTimes = Expression<Int64?>("repeatTimes")
-    static let isDue = Expression<Bool?>("isDue")
-    static let dueDate = Expression<Date?>("dueDate")
+    static let remindDateEx = Expression<Date?>("remindDate")
+    static let repeatTimesEx = Expression<Int64?>("repeatTimes")
+    static let dueDateEx = Expression<Date?>("dueDate")
+    static let noteEx = Expression<String?>("note")
     
     /// Make Singleton
     var db: Connection?
@@ -48,11 +47,10 @@ extension TasksManager {
                 try db!.run(tasks.create(ifNotExists: true) { t in
                     t.column(TasksManager.idEx, primaryKey: true)
                     t.column(TasksManager.titleEx)
-                    t.column(TasksManager.hasRemindDate)
-                    t.column(TasksManager.remindDate)
-                    t.column(TasksManager.repeatTimes)
-                    t.column(TasksManager.isDue)
-                    t.column(TasksManager.dueDate)
+                    t.column(TasksManager.remindDateEx)
+                    t.column(TasksManager.repeatTimesEx)
+                    t.column(TasksManager.dueDateEx)
+                    t.column(TasksManager.noteEx)
                 })
             } catch {
                 print("Create Table failed")
@@ -96,8 +94,11 @@ extension TasksManager {
         let db = TasksManager.singleton.db
         if db != nil {
             let tasks = Table(DBConstant.tasksTableName)
+            let query = tasks.select(tasks[*])
+                             .filter(TasksManager.remindDateEx == nil && TasksManager.dueDateEx == nil)
+                             .order(TasksManager.idEx.desc)
             do {
-                for task in try db!.prepare(tasks) {
+                for task in try db!.prepare(query) {
                     ret.append(Task(title: task[TasksManager.titleEx]))
                     print(task)
                 }
