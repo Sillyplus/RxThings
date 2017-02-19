@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B3721E535980004183B9 /* ShakeDebug.swift */; };
 		3B67B3751E53F882004183B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B67B3741E53F882004183B9 /* Assets.xcassets */; };
-		3B67B37C1E54A1CC004183B9 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B37B1E54A1CC004183B9 /* AddTaskViewController.swift */; };
+		3B67B37C1E54A1CC004183B9 /* TaskEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B37B1E54A1CC004183B9 /* TaskEditingViewController.swift */; };
 		3B67B37E1E54A1F9004183B9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67B37D1E54A1F9004183B9 /* SettingViewController.swift */; };
 		3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7627FB1E52A70F0052C07A /* AppDelegate.swift */; };
 		3B7628061E52A70F0052C07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7628041E52A70F0052C07A /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		2811113AA6A261E85A606D3C /* Pods-RxThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxThings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxThings/Pods-RxThings.debug.xcconfig"; sourceTree = "<group>"; };
 		3B67B3721E535980004183B9 /* ShakeDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeDebug.swift; sourceTree = "<group>"; };
 		3B67B3741E53F882004183B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B67B37B1E54A1CC004183B9 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		3B67B37B1E54A1CC004183B9 /* TaskEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEditingViewController.swift; sourceTree = "<group>"; };
 		3B67B37D1E54A1F9004183B9 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3B7627F81E52A70F0052C07A /* RxThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7627FB1E52A70F0052C07A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			children = (
 				3B7627FB1E52A70F0052C07A /* AppDelegate.swift */,
 				3B76282B1E53419F0052C07A /* TodoListsViewController.swift */,
-				3B67B37B1E54A1CC004183B9 /* AddTaskViewController.swift */,
+				3B67B37B1E54A1CC004183B9 /* TaskEditingViewController.swift */,
 				3B67B37D1E54A1F9004183B9 /* SettingViewController.swift */,
 				3BC2EA201E5695E60081AEF8 /* InboxViewController.swift */,
 				3BC2EA221E5697800081AEF8 /* TodayViewController.swift */,
@@ -411,7 +411,7 @@
 				3BC2EA271E5697A20081AEF8 /* ScheduledViewController.swift in Sources */,
 				3B67B3731E535980004183B9 /* ShakeDebug.swift in Sources */,
 				3B7627FC1E52A70F0052C07A /* AppDelegate.swift in Sources */,
-				3B67B37C1E54A1CC004183B9 /* AddTaskViewController.swift in Sources */,
+				3B67B37C1E54A1CC004183B9 /* TaskEditingViewController.swift in Sources */,
 				3BC2EA2B1E5697CA0081AEF8 /* ProjectsViewController.swift in Sources */,
 				3B67B37E1E54A1F9004183B9 /* SettingViewController.swift in Sources */,
 				3BC2EA2D1E5706560081AEF8 /* TasksManager.swift in Sources */,

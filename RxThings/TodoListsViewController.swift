@@ -98,9 +98,9 @@ class TodoListsViewController: UIViewController {
     }
     
     func navigateToAddView() {
-        let addTaskViewController = AddTaskViewController()
+        let taskEditingViewController = TaskEditingViewController()
         self.navigationController?.setToolbarHidden(true, animated: true)
-        self.present(addTaskViewController, animated: true) {
+        self.present(taskEditingViewController, animated: true) {
             // Do Something
         }
     }

@@ -1,5 +1,5 @@
 //
-//  AddTaskViewController.swift
+//  TaskEditingViewController.swift
 //  RxThings
 //
 //  Created by silly on 15/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+class TaskEditingViewController: UIViewController {
 
     var navigationBar: UINavigationBar?
     
@@ -22,8 +22,8 @@ class AddTaskViewController: UIViewController {
         navigationBar?.tintColor = .white
         self.view.addSubview(navigationBar!)
         let navigationItem = UINavigationItem(title: "To-Do")
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(AddTaskViewController.cancelAddTask))
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AddTaskViewController.finishAddTask))
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(TaskEditingViewController.cancelAddTask))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(TaskEditingViewController.finishAddTask))
         navigationItem.leftBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem = doneButton
         self.navigationBar?.setItems([navigationItem], animated: false)
