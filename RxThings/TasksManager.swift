@@ -17,6 +17,7 @@ class TasksManager {
     static let repeatTimesEx = Expression<Int64?>("repeatTimes")
     static let dueDateEx = Expression<Date?>("dueDate")
     static let noteEx = Expression<String?>("note")
+    static let doneEx = Expression<Bool>("done")
     
     /// Make Singleton
     var db: Connection?
@@ -51,6 +52,7 @@ extension TasksManager {
                     t.column(TasksManager.repeatTimesEx)
                     t.column(TasksManager.dueDateEx)
                     t.column(TasksManager.noteEx)
+                    t.column(TasksManager.doneEx, defaultValue: false)
                 })
             } catch {
                 print("Create Table failed")
@@ -89,13 +91,39 @@ extension TasksManager {
         }
     }
     
+    public func update(_ task: Task) {
+        let db = TasksManager.singleton.db
+        if db != nil {
+            let tasks = Table(DBConstant.tasksTableName)
+            let taskRow = tasks.filter(TasksManager.idEx == task.id!)
+            do {
+                if try db!.run(taskRow.update([TasksManager.titleEx <- task.title,
+                                               TasksManager.remindDateEx <- task.remindDate,
+                                               TasksManager.repeatTimesEx <- task.repeatTimes,
+                                               TasksManager.dueDateEx <- task.dueDate,
+                                               TasksManager.noteEx <- task.note,
+                                               TasksManager.doneEx <- task.done])) > 0 {
+                    print("Update task success")
+                } else {
+                    print("No task updated")
+                }
+            } catch {
+                print("Update task failed")
+            }
+        } else {
+            print("Connect To DB Failed!")
+        }
+    }
+    
     public func fetchInbox() -> [Task] {
         var ret: [Task] = []
         let db = TasksManager.singleton.db
         if db != nil {
             let tasks = Table(DBConstant.tasksTableName)
             let query = tasks.select(tasks[*])
-                             .filter(TasksManager.remindDateEx == nil && TasksManager.dueDateEx == nil)
+                             .filter(TasksManager.remindDateEx == nil &&
+                                     TasksManager.dueDateEx == nil &&
+                                     TasksManager.doneEx == false)
                              .order(TasksManager.idEx.desc)
             do {
                 for task in try db!.prepare(query) {

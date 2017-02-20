@@ -17,13 +17,12 @@ class Task {
     var repeatTimes: Int64?
     var dueDate: Date?
     var note: String?
+    var done: Bool = false
     
     init(title: String) {
         self.title = title
     }
-    
-    
-    
+
     init(taskRow: Row) {
         self.id = taskRow[TasksManager.idEx]
         self.title = taskRow[TasksManager.titleEx]
@@ -31,6 +30,7 @@ class Task {
         self.repeatTimes = taskRow[TasksManager.repeatTimesEx]
         self.dueDate = taskRow[TasksManager.dueDateEx]
         self.note = taskRow[TasksManager.noteEx]
+        self.done = taskRow[TasksManager.doneEx]
     }
     
 }
