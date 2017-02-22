@@ -5,19 +5,22 @@ PODS:
   - SQLite.swift (0.11.2):
     - SQLite.swift/standard (= 0.11.2)
   - SQLite.swift/standard (0.11.2)
+  - SwiftyBeaver (1.1.1)
 
 DEPENDENCIES:
   - FLEX (~> 2.4.0)
   - RxSwift (~> 3.0)
   - SnapKit (~> 3.0)
   - SQLite.swift (~> 0.11.2)
+  - SwiftyBeaver (~> 1.1)
 
 SPEC CHECKSUMS:
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+  SwiftyBeaver: 2b68694df862381235e32bcfc4ec991e26bf131d
 
-PODFILE CHECKSUM: fe5fb88dcffa430a1f58faf217d5a8d2c12ccd6d
+PODFILE CHECKSUM: 0f842de3c1a95a25511253c19be4e671ac54e0d4
 
 COCOAPODS: 1.2.0

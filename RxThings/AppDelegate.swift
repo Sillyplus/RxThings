@@ -8,6 +8,9 @@
 
 import UIKit
 import SQLite
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /// Init DB
         TasksManager.createTable()
+        
+        /// Configure SwiftyBeaver
+        /// add log destinations. at least one is needed!
+        let console = ConsoleDestination()  // log to Xcode Console
+        // let file = FileDestination()  // log to default swiftybeaver.log file
+        
+        /// use custom format and set console output to short time, log level & message
+        console.format = "$DHH:mm:ss$d $L $M"
+        
+        /// add the destinations to SwiftyBeaver
+        log.addDestination(console)
+        // log.addDestination(file)
         
         return true
     }

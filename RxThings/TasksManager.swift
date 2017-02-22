@@ -128,7 +128,7 @@ extension TasksManager {
             do {
                 for task in try db!.prepare(query) {
                     ret.append(Task(title: task[TasksManager.titleEx]))
-                    print(task)
+                    log.info(task)
                 }
                 return ret
             } catch {
