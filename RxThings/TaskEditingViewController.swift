@@ -29,7 +29,7 @@ class TaskEditingViewController: UIViewController {
         self.navigationBar?.setItems([navigationItem], animated: false)
         
         // Setup Add View
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     func finishAddTask() {

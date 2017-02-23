@@ -108,7 +108,9 @@ class TodoListsViewController: UIViewController {
     func navigateToSettingView() {
         let settingViewController = SettingViewController()
         self.navigationController?.setToolbarHidden(true, animated: true)
-        self.show(settingViewController, sender: self)
+        self.present(settingViewController, animated: true) { 
+            // Do Something
+        }
     }
     
     override func didReceiveMemoryWarning() {
