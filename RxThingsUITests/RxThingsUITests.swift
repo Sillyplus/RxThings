@@ -31,6 +31,11 @@ class RxThingsUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.toolbars.children(matching: .button).element(boundBy: 0).tap()
+        app.otherElements.containing(.navigationBar, identifier:"Lists").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
+        app.buttons["More Info"].tap()
     }
     
 }

@@ -35,6 +35,10 @@ class SettingViewController: UIViewController {
             make.width.equalTo(88)
             make.height.equalTo(44)
         }
+        resetButton.layer.cornerRadius = 5
+        resetButton.layer.masksToBounds = true
+        resetButton.layer.borderWidth = 0.5
+        resetButton.layer.borderColor = UIColor.black.cgColor
         resetButton.titleLabel?.text = "Reset"
         resetButton.setTitle("Reset", for: .normal)
         resetButton.tintColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
